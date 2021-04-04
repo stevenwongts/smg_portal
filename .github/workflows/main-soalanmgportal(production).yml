@@ -23,8 +23,12 @@ jobs:
       with:
         dotnet-version: '3.1.301'
 
+    - name: Install dependencies
+      run: dotnet restore
+      working-directory: smg_portal/smgwebapp/smgwebapp
+
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: dotnet build --configuration Release --no-restore
 
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
