@@ -25,7 +25,7 @@ jobs:
 
     - name: Install dependencies
       run: dotnet restore
-      working-directory: smg_portal/smgwebapp/smgwebapp
+      working-directory: D:/a/smg_portal/smg_portal/smgwebapp/smgwebapp
 
     - name: Build with dotnet
       run: dotnet build --configuration Release --no-restore
